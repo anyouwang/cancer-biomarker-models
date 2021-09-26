@@ -1,0 +1,15 @@
+
+def myModel(train_x):
+
+        mymodel = Sequential([ 
+          Dense(30, input_dim=len(train_x.columns), activation='relu'),
+          Dropout(0.1),
+          Dense(60, activation='relu'),
+          Dropout(0.1),
+          Dense(1, activation='sigmoid')
+           ])
+          mymodel.compile(optimizer='adam',loss='binary_crossentropy',
+                  metrics=['accuracy'])
+        return mymodel
+      
+
